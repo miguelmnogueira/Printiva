@@ -5,6 +5,7 @@ import { Link } from "react-router";
 const links = [
 	{ name: "Página Inicial", href: "/home" },
 	{ name: "Nossos Produtos", href: "/catalog" },
+	{ name: "Contato", href: "/contact" },
 	{ name: "Sobre Nós", href: "/aboutus" },
 ];
 
