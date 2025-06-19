@@ -11,7 +11,6 @@ const root = document.getElementById("root")!;
 
 ReactDOM.createRoot(root).render(
 	<BrowserRouter>
-		<SpeedInsights />
 		<ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
 			<Navbar />
 			<Routes>
