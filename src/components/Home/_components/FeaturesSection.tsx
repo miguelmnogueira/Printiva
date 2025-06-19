@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { FeaturesSectionWithHoverEffects } from "../../feature-section-with-hover-effects";
+import { FeaturesSectionWithHoverEffects } from "./feature-section-with-hover-effects";
 import { FaAngleRight } from "react-icons/fa";
 import { Element } from "react-scroll";
 import { BlurFade } from "@/components/ui/blur-fade";
