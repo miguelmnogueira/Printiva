@@ -9,15 +9,15 @@ const CallToAction = () => {
 				<h1 className=" md:hidden text-center  text-4xl font-semibold">
 					Criação e impressão 3D em um só lugar.
 				</h1>
-				<h1 className="max-md:hidden md:text-6xl text-4xl font-semibold">
+				<h1 className="max-md:hidden max-w-[80%] text-5xl font-semibold">
 					Criação, personalização e impressão 3D em um só lugar.
 				</h1>
 			</BlurFade>
 			<BlurFade delay={0.3 * 2.2} duration={1.5} inView>
-				<h3 className="text-2xl md:hidden md:max-w-[60%] font-medium text-subtitle text-center ">
+				<h3 className="text-2xl md:hidden font-medium text-subtitle text-center ">
 					Design e tecnologia para dar vida às suas ideias.
 				</h3>
-				<h3 className="text-2xl hidden md:flex font-medium bg-linear-to-r from-subtitle to-subtitle/60 bg-clip-text text-transparent ">
+				<h3 className="text-2xl hidden md:flex  max-w-[60%] font-medium bg-linear-to-r from-subtitle to-subtitle/60 bg-clip-text text-transparent ">
 					Design, arte e tecnologia trabalhando juntos para
 					materializar o que você imagina.
 				</h3>
