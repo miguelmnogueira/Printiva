@@ -1,4 +1,5 @@
 import { FaAngleRight } from "react-icons/fa6";
+import { Link } from "react-scroll";
 
 const CallToAction = () => {
 	return (
@@ -11,16 +12,21 @@ const CallToAction = () => {
 				que você imagina.
 			</h3>
 			<div className="flex gap-5 items-center mt-5 font-inter">
-				<button className="px-4 h-10 bg-foreground/90 rounded-lg text-primary-foreground font-semibold text-[15px] hover:bg-white transition-colors cursor-pointer">
+				<Link
+					to={"/contact"}
+					className="flex items-center px-4 h-10 bg-foreground/90 rounded-lg text-primary-foreground font-semibold text-[15px] hover:bg-white transition-colors cursor-pointer"
+				>
 					Inicie seu projeto
-				</button>
-				<a
-					href=""
-					className="h-10 flex items-center text-primary/65 text-[16px]  gap-2 hover:ml-0.5 hover:gap-3 hover:text-primary/90 transition-all"
+				</Link>
+				<Link
+					to={"features"}
+					smooth={`500`}
+					offset={-130}
+					className="h-10 flex items-center text-primary/65 text-[16px]  gap-2 hover:ml-0.5 hover:gap-2.5 hover:text-primary/90 transition-all"
 				>
 					Veja mais sobre nossos projetos
 					<FaAngleRight />
-				</a>
+				</Link>
 			</div>
 		</div>
 	);

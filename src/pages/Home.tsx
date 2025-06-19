@@ -3,7 +3,7 @@ import MainSection from "@/components/Home/_components/MainSection";
 
 const Home = () => {
 	return (
-		<main className="pb-40">
+		<main className="">
 			<MainSection />
 			<FeaturesSection />
 		</main>

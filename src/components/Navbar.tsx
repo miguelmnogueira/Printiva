@@ -1,6 +1,7 @@
 import PrintivaLogo from "./PrintivaLogo";
 
 import { Link } from "react-router";
+import { animateScroll as scroll } from "react-scroll";
 
 const links = [
 	{ name: "Página Inicial", href: "/home" },
@@ -10,11 +11,14 @@ const links = [
 ];
 
 const Navbar = () => {
+	const scrollToTop = () => {
+		scroll.scrollToTop({ duration: 600 });
+	};
 	return (
 		<header className="h-20 w-full flex px-padding bg-linear-to-b from-background to-background/80 fixed top-0 left-0 border-b border-border/50 justify-between backdrop-blur-[12px]">
 			<a
-				href="/home"
-				className="flex justify-center items-center gap-1.5"
+				onClick={scrollToTop}
+				className="flex justify-center items-center gap-1.5 cursor-pointer"
 			>
 				<PrintivaLogo />
 				<span className="text-xl font-poppins font-semibold">

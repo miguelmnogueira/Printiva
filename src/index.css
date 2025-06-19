@@ -127,4 +127,30 @@
 	body {
 		@apply bg-background text-foreground mt-20 font-inter px-padding;
 	}
+
+	body {
+		--sb-track-color: transparent;
+		--sb-thumb-color: #c1c1c1;
+		--sb-size: 6px;
+	}
+
+	body::-webkit-scrollbar {
+		width: var(--sb-size);
+	}
+
+	body::-webkit-scrollbar-track {
+		background: var(--sb-track-color);
+		border-radius: 6px;
+	}
+
+	body::-webkit-scrollbar-thumb {
+		background: var(--sb-thumb-color);
+		border-radius: 6px;
+	}
+
+	@supports not selector(::-webkit-scrollbar) {
+		body {
+			scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+		}
+	}
 }
