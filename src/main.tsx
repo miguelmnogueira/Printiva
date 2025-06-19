@@ -6,11 +6,13 @@ import "./index.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import NoRoutes from "./pages/NoRoutes";
 import Catalog from "./pages/Catalog";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const root = document.getElementById("root")!;
 
 ReactDOM.createRoot(root).render(
 	<BrowserRouter>
+		<SpeedInsights />
 		<ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
 			<Navbar />
 			<Routes>
