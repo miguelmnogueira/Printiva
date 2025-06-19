@@ -99,8 +99,11 @@ const images = [
 
 const InfiniteGrid = () => {
 	return (
-		<div className="relative mt-12 mb-20">
-			<DraggableContainer variant="masonry">
+		<div className="relative mt-12 mb-30 md:w-screen w-full md:-mx-[8%]">
+			<DraggableContainer
+				variant="masonry"
+				className="max-sm:pointer-events-none"
+			>
 				<GridBody>
 					{images.map((image) => (
 						<GridItem
@@ -110,7 +113,7 @@ const InfiniteGrid = () => {
 							<img
 								src={image.src}
 								alt={image.alt}
-								className="pointer-events-none absolute h-full w-full object-cover"
+								className="pointer-events-none absolute object-cover"
 							/>
 						</GridItem>
 					))}

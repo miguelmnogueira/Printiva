@@ -3,7 +3,7 @@ import MainSection from "@/components/Home/_components/MainSection";
 
 const Home = () => {
 	return (
-		<main className="">
+		<main className="px-0">
 			<MainSection />
 			<FeaturesSection />
 		</main>

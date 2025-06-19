@@ -7,9 +7,47 @@
 	--font-inter: "Inter", sans-serif;
 	--color-subtitle: #929292;
 	--spacing-padding: 20%;
+	--spacing-sm-padding: 4%;
+	--spacing-md-padding: 7%;
 	--color-text-tertiary: #8a8f98;
+
+	--breakpoint-lg: 75rem;
 }
 
+@layer base {
+	* {
+		@apply border-border outline-ring/50;
+	}
+	body {
+		@apply bg-background text-foreground mt-20 font-inter overflow-x-hidden px-padding sm:px-md-padding max-sm:px-md-padding;
+	}
+
+	body {
+		--sb-track-color: transparent;
+		--sb-thumb-color: #c1c1c1;
+		--sb-size: 6px;
+	}
+
+	body::-webkit-scrollbar {
+		width: var(--sb-size);
+	}
+
+	body::-webkit-scrollbar-track {
+		background: var(--sb-track-color);
+		border-radius: 6px;
+	}
+
+	body::-webkit-scrollbar-thumb {
+		background: var(--sb-thumb-color);
+		border-radius: 6px;
+	}
+
+	@supports not selector(::-webkit-scrollbar) {
+		body {
+			scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+		}
+	}
+}
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -118,39 +156,4 @@
 	--sidebar-accent-foreground: oklch(0.985 0 0);
 	--sidebar-border: oklch(1 0 0 / 10%);
 	--sidebar-ring: oklch(0.552 0.016 285.938);
-}
-
-@layer base {
-	* {
-		@apply border-border outline-ring/50;
-	}
-	body {
-		@apply bg-background text-foreground mt-20 font-inter px-padding;
-	}
-
-	body {
-		--sb-track-color: transparent;
-		--sb-thumb-color: #c1c1c1;
-		--sb-size: 6px;
-	}
-
-	body::-webkit-scrollbar {
-		width: var(--sb-size);
-	}
-
-	body::-webkit-scrollbar-track {
-		background: var(--sb-track-color);
-		border-radius: 6px;
-	}
-
-	body::-webkit-scrollbar-thumb {
-		background: var(--sb-thumb-color);
-		border-radius: 6px;
-	}
-
-	@supports not selector(::-webkit-scrollbar) {
-		body {
-			scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
-		}
-	}
 }
