@@ -15,7 +15,7 @@ const Navbar = () => {
 		scroll.scrollToTop({ duration: 600 });
 	};
 	return (
-		<header className="h-20 w-full flex px-padding bg-linear-to-b from-background to-background/80 fixed top-0 left-0 border-b border-border/50 justify-between backdrop-blur-[12px]">
+		<header className="z-20 h-20 w-full flex px-padding bg-linear-to-b from-background to-background/80 fixed top-0 left-0 border-b border-border/50 justify-between backdrop-blur-[12px]">
 			<a
 				onClick={scrollToTop}
 				className="flex justify-center items-center gap-1.5 cursor-pointer"
