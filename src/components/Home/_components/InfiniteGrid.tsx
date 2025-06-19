@@ -99,7 +99,7 @@ const images = [
 
 const InfiniteGrid = () => {
 	return (
-		<div className="relative mt-12 mb-20">
+		<div className="relative mt-12 mb-30 w-screen -mx-padding">
 			<DraggableContainer variant="masonry">
 				<GridBody>
 					{images.map((image) => (

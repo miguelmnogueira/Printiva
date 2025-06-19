@@ -4,7 +4,7 @@ import { BlurFade } from "@/components/ui/blur-fade";
 
 const CallToAction = () => {
 	return (
-		<div className="font-poppins w-[950px] flex flex-col gap-5">
+		<div className="font-poppins w-[80%] flex flex-col gap-5 ">
 			<BlurFade delay={0.25} duration={1}>
 				<h1 className="text-6xl font-semibold">
 					Criação, personalização e impressão 3D em um só lugar.

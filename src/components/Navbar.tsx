@@ -21,7 +21,7 @@ const Navbar = () => {
 				className="flex justify-center items-center gap-1.5 cursor-pointer"
 			>
 				<PrintivaLogo />
-				<span className="text-xl font-poppins font-semibold">
+				<span className="text-xl font-inter font-semibold">
 					Printiva
 				</span>
 			</a>

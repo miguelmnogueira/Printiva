@@ -125,7 +125,7 @@
 		@apply border-border outline-ring/50;
 	}
 	body {
-		@apply bg-background text-foreground mt-20 font-inter px-padding;
+		@apply bg-background text-foreground mt-20 font-inter px-padding overflow-x-hidden;
 	}
 
 	body {

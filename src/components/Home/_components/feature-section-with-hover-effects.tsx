@@ -97,7 +97,7 @@ const Feature = ({
 			{index >= 4 && (
 				<div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-neutral-100 dark:from-neutral-800 to-transparent pointer-events-none" />
 			)}
-			<div className="mb-4 text-[24px] relative z-10 px-10 text-neutral-600 dark:text-neutral-400">
+			<div className="group-hover/feature:text-[25px] duration-200 transition-all mb-4 text-[24px] relative z-10 px-10 text-neutral-600 dark:text-neutral-400">
 				{icon}
 			</div>
 			<div className="text-lg font-bold mb-2 relative z-10 px-10">
@@ -106,7 +106,7 @@ const Feature = ({
 					{title}
 				</span>
 			</div>
-			<p className="text-sm text-neutral-600 dark:text-neutral-300 max-w-xs relative z-10 px-10">
+			<p className="group-hover/feature:translate-x-2 duration-200 transition-all text-sm text-neutral-600 dark:text-neutral-300 max-w-xs relative z-10 px-10">
 				{description}
 			</p>
 		</div>
