@@ -99,7 +99,7 @@ const images = [
 
 const InfiniteGrid = () => {
 	return (
-		<div className="relative mt-12 mb-30 md:w-screen w-full md:-mx-[8%]">
+		<div className="relative mt-12 mb-30 md:w-screen w-full md:-mx-[33%]">
 			<DraggableContainer
 				variant="masonry"
 				className="max-sm:pointer-events-none"
