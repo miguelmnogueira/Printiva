@@ -4,7 +4,7 @@ import InfiniteGrid from "./InfiniteGrid";
 
 const MainSection = () => {
 	return (
-		<section className="mt-32">
+		<section className="mt-32 flex flex-col">
 			<CallToAction />
 			<InfiniteGrid />
 		</section>
