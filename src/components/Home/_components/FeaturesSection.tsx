@@ -7,7 +7,7 @@ import { BlurFade } from "@/components/ui/blur-fade";
 const FeaturesSection = () => {
 	return (
 		<section className="flex flex-col gap-20 max-sm:gap-5">
-			<BlurFade delay={0.25 * 3} duration={1} inView>
+			<BlurFade delay={0.15 * 2} duration={1} inView>
 				<div className="flex flex-col md:flex-row justify-between max-md:gap-3 md:w-[90%]">
 					<Element name="features">
 						<h3 className="text-5xl md:text-6xl font-poppins font-semibold lg:w-[90%]">
@@ -39,11 +39,9 @@ const FeaturesSection = () => {
 					</div>
 				</div>
 			</BlurFade>
-			<BlurFade delay={0.25 * 4} duration={1} inView>
-				<div className="mb-7 w-full">
-					<FeaturesSectionWithHoverEffects />
-				</div>
-			</BlurFade>
+			<div className="mb-7 w-full">
+				<FeaturesSectionWithHoverEffects />
+			</div>
 		</section>
 	);
 };
