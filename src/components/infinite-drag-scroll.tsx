@@ -72,7 +72,7 @@ export const DraggableContainer = ({
 
 		const handleWheelScroll = (event: WheelEvent) => {
 			if (!isDragging) {
-				animate(y, y.get() - event.deltaY * 2.7, {
+				animate(y, y.get() - event.deltaY * 2, {
 					type: "tween",
 					duration: 1.2,
 					ease: cubicBezier(0.18, 0.71, 0.11, 1),
