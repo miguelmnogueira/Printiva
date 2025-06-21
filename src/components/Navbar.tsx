@@ -15,17 +15,17 @@ const Navbar = () => {
 		scroll.scrollToTop({ duration: 600 });
 	};
 	return (
-		<header className="z-20 h-20 w-full flex px-padding bg-linear-to-b from-background to-background/80 fixed top-0 left-0 border-b border-border/50 justify-between backdrop-blur-[12px]">
+		<header className="md:px-padding z-20 h-20 w-full flex px-sm-padding bg-linear-to-b from-background to-background/80 fixed top-0 left-0 border-b border-border/50 justify-between backdrop-blur-[12px]">
 			<a
 				onClick={scrollToTop}
 				className="flex justify-center items-center gap-1.5 cursor-pointer"
 			>
 				<PrintivaLogo />
-				<span className="text-xl font-poppins font-semibold">
+				<span className="text-xl font-inter font-semibold hidden md:block">
 					Printiva
 				</span>
 			</a>
-			<nav className="flex justify-center items-center h-full gap-10 text-text-tertiary">
+			<nav className="md:flex hidden justify-center items-center h-full gap-10 text-text-tertiary">
 				{links.map((link) => (
 					<Link
 						key={link.href}

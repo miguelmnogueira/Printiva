@@ -1,54 +1,94 @@
-# React + TypeScript + Vite
+<h1 align="center">PRINTIVA</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center"><i>Transforming Ideas into Stunning 3D Prints</i></p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <img src="https://img.shields.io/github/last-commit/miguelmnogueira/Printiva?style=flat-square" />
+  <img src="https://img.shields.io/github/languages/top/miguelmnogueira/Printiva?style=flat-square" />
+  <img src="https://img.shields.io/github/languages/count/miguelmnogueira/Printiva?style=flat-square" />
+  <img src="https://img.shields.io/github/languages/code-size/miguelmnogueira/Printiva?style=flat-square" />
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<p align="center"><i>Built with the tools and technologies:</i></p>
 
-## Expanding the ESLint configuration
+<p align="center">
+  <img src="https://img.shields.io/badge/-JSON-black?style=for-the-badge&logo=json&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Markdown-000000?style=for-the-badge&logo=markdown" />
+  <img src="https://img.shields.io/badge/-npm-CB3837?style=for-the-badge&logo=npm" />
+  <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/-React-20232A?style=for-the-badge&logo=react" />
+  <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/-Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/-ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white" />
+  <img src="https://img.shields.io/badge/-React%20Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" />
+</p>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+
+## 📖 Overview
+
+**Printiva** is the official landing page for my 3D printing brand.  
+It was designed to reflect the essence of the brand — minimalist, sharp, and product-focused.
+
+The site showcases custom 3D print services, design previews, and an easy way for customers to get in touch or place orders (via WhatsApp or marketplace platforms like Shopee).
+
+---
+
+## 🛠 Stack
+
+This site is built using:
+
+- **React** + **TypeScript**
+- **Vite** for bundling
+- **TailwindCSS** for styling
+- **Framer Motion** for animations
+- **Cloudinary** (or similar) for media hosting
+
+---
+
+## 🖼️ Live Preview
+
+👉 [View the site](https://printiva.vercel.app/home)  
+📦 Or open it locally:
+
+```bash
+git clone https://github.com/miguelmnogueira/Printiva.git
+cd Printiva
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Visit `http://localhost:5173`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## 🗂️ Project Structure
+
 ```
+src/
+├── assets/         # Static files and images
+├── components/     # Reusable UI components
+├── pages/          # Main views / sections
+├── styles/         # Tailwind and custom styles
+├── main.tsx        # App entry
+└── App.tsx         # Routes and structure
+```
+
+---
+
+## 📌 Purpose
+
+This repository exists to version and manage the **source code** of my personal brand’s website.  
+It’s not intended as a template or public tool — but you're welcome to explore it for inspiration or front-end reference.
+
+---
+
+## 🧑‍💻 Author
+
+**Miguel Nogueira**  
+[GitHub](https://github.com/miguelmnogueira)
+
+---
+
+<p align="center">Made with ❤️ and a 3D printer</p>
