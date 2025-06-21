@@ -15,6 +15,7 @@ ReactDOM.createRoot(root).render(
 			<Navbar />
 			<Routes>
 				<Route path="/home" element={<Home />} />
+				<Route path="" element={<Home />} />
 				<Route path="/catalog" element={<Catalog />} />
 				<Route path="*" element={<NoRoutes />} />
 			</Routes>
