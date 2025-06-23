@@ -2,6 +2,9 @@ import PrintivaLogo from "./PrintivaLogo";
 
 import { Link } from "react-router";
 import { animateScroll as scroll } from "react-scroll";
+import { ThemeSwitcher } from "./ui/theme-switcher";
+import { useContext } from "react";
+import { useTheme } from "./theme-provider";
 
 const links = [
 	{ name: "Página Inicial", href: "/home" },
@@ -11,6 +14,8 @@ const links = [
 ];
 
 const Navbar = () => {
+	const { setTheme } = useTheme();
+
 	const scrollToTop = () => {
 		scroll.scrollToTop({ duration: 600 });
 	};
@@ -25,7 +30,7 @@ const Navbar = () => {
 					Printiva
 				</span>
 			</a>
-			<nav className="md:flex hidden justify-center items-center h-full gap-10 text-text-tertiary">
+			<nav className="md:flex hidden justify-center items-center h-full gap-10 text-tertiary">
 				{links.map((link) => (
 					<Link
 						key={link.href}
@@ -38,6 +43,7 @@ const Navbar = () => {
 						{link.name}
 					</Link>
 				))}
+				<ThemeSwitcher onChange={setTheme} />
 			</nav>
 		</header>
 	);

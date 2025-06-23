@@ -11,7 +11,7 @@ const root = document.getElementById("root")!;
 
 ReactDOM.createRoot(root).render(
 	<BrowserRouter>
-		<ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+		<ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
 			<Navbar />
 			<Routes>
 				<Route path="/home" element={<Home />} />

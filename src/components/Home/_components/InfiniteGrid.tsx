@@ -122,8 +122,6 @@ const InfiniteGrid = () => {
 			<div className="absolute w-full h-full bg-radial from-transparent to-background top-0 left-0 pointer-events-none"></div>
 		</div>
 	);
-
-	//TODO: Infinite Grid
 };
 
 export default InfiniteGrid;

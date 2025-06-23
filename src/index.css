@@ -9,7 +9,7 @@
 	--spacing-padding: 20%;
 	--spacing-sm-padding: 4%;
 	--spacing-md-padding: 7%;
-	--color-text-tertiary: #8a8f98;
+	--color-tertiary: #8a8f98;
 
 	--breakpoint-lg: 75rem;
 }
@@ -125,6 +125,8 @@
 }
 
 .dark {
+	--color-text-tertiary: #8a8f98;
+
 	--background: oklch(0.141 0.005 285.823);
 	--foreground: oklch(0.985 0 0);
 	--card: oklch(0.21 0.006 285.885);
