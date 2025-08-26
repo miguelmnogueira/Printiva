@@ -1,14 +1,7 @@
 import PrintivaLogo from "./PrintivaLogo";
 
-import { Link } from "react-router";
 import { animateScroll as scroll } from "react-scroll";
-
-const links = [
-	{ name: "Página Inicial", href: "/home" },
-	{ name: "Nossos Produtos", href: "/catalog" },
-	{ name: "Contato", href: "/contact" },
-	{ name: "Sobre Nós", href: "/aboutus" },
-];
+import Navigation from "./Navigation";
 
 const Navbar = () => {
 	const scrollToTop = () => {
@@ -25,20 +18,7 @@ const Navbar = () => {
 					Printiva
 				</span>
 			</a>
-			<nav className="md:flex hidden justify-center items-center h-full gap-10 text-tertiary">
-				{links.map((link) => (
-					<Link
-						key={link.href}
-						to={link.href}
-						className={
-							`${location.pathname === link.href ? "" : ""}` +
-							" hover:underline underline-offset-2 text-sm "
-						}
-					>
-						{link.name}
-					</Link>
-				))}
-			</nav>
+			<Navigation />
 		</header>
 	);
 };

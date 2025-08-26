@@ -47,6 +47,10 @@
 			scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
 		}
 	}
+
+	.lucide {
+		color: var(--color-primary) !important;
+	}
 }
 @custom-variant dark (&:is(.dark *));
 
