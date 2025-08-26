@@ -2,8 +2,6 @@ import PrintivaLogo from "./PrintivaLogo";
 
 import { Link } from "react-router";
 import { animateScroll as scroll } from "react-scroll";
-import { ThemeSwitcher } from "./ui/theme-switcher";
-import { useContext } from "react";
 import { useTheme } from "./theme-provider";
 
 const links = [
@@ -43,7 +41,6 @@ const Navbar = () => {
 						{link.name}
 					</Link>
 				))}
-				<ThemeSwitcher onChange={setTheme} />
 			</nav>
 		</header>
 	);
