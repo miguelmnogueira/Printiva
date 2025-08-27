@@ -12,7 +12,7 @@ import { Gamepad2, PackageSearch, PawPrint, User } from "lucide-react";
 const Navigation = () => {
 	return (
 		<NavigationMenu viewport={false} className="max-md:hidden">
-			<NavigationMenuList className="text-text-tertiary lg:gap-5">
+			<NavigationMenuList className="text-text-tertiary lg:gap-5 text-tertiary">
 				<NavigationMenuItem>
 					<NavigationMenuLink href="/home">
 						Página Inicial
