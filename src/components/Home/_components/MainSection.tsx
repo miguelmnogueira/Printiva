@@ -3,7 +3,7 @@ import InfiniteGrid from "./InfiniteGrid";
 
 const MainSection = () => {
 	return (
-		<section className=" flex flex-col gap-12">
+		<section className=" flex flex-col gap-20">
 			<CallToAction />
 			<InfiniteGrid />
 		</section>

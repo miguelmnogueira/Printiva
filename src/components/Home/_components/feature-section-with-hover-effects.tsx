@@ -34,7 +34,7 @@ export function FeaturesSectionWithHoverEffects() {
 		{
 			title: "Materiais premium",
 			description:
-				"Escolha entre PLA, resina e outros — tudo com acabamento profissional.",
+				"Escolha entre PLA, foscos e brilhantes — tudo com acabamento profissional.",
 			icon: <TbLayersSubtract />,
 		},
 		{
