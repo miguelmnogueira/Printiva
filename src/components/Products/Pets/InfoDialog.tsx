@@ -10,11 +10,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { PhoneInput } from "@/components/ui/phone-input";
-import { useState } from "react";
 
-const InfoDialog = () => {
-	const [open, setOpen] = useState(false);
-
+const InfoDialog = ({
+	open,
+	setOpen,
+}: {
+	open: boolean;
+	setOpen: (open: boolean) => void;
+}) => {
 	return (
 		<AlertDialog open={open} onOpenChange={setOpen}>
 			<AlertDialogContent

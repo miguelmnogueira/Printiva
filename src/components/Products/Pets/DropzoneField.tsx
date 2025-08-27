@@ -5,8 +5,13 @@ import {
 } from "@/components/ui/shadcn-io/dropzone";
 import { useState } from "react";
 
-const DropzoneField = () => {
-	const [files, setFiles] = useState<File[] | undefined>();
+const DropzoneField = ({
+	files,
+	setFiles,
+}: {
+	files: File[] | undefined;
+	setFiles: (files: File[] | undefined) => void;
+}) => {
 	const [filePreview, setFilePreview] = useState<string | undefined>();
 	const handleDrop = (files: File[]) => {
 		console.log(files);
@@ -29,7 +34,7 @@ const DropzoneField = () => {
 			src={files}
 			maxSize={1024 * 1024 * 10}
 			minSize={1024}
-			className="size-112"
+			className="w-112 h-[100%]"
 		>
 			<DropzoneEmptyState />
 			<DropzoneContent>
