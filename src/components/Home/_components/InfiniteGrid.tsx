@@ -5,6 +5,7 @@ import {
 } from "@/components/infinite-drag-scroll";
 
 const images = [
+	// TODO add my own images from the projects
 	{
 		id: 1,
 		alt: "Silhouette of a traditional Japanese pagoda at sunset",

@@ -14,28 +14,31 @@ const Paws = () => {
 		<main className={`flex flex-col gap-12 ${open && "hidden"}`}>
 			<MainTitle />
 			<div className="flex gap-24 px-12">
-				<BlurFade
-					duration={0.6}
-					delay={0.6}
-					inView
-					className="flex flex-col items-end gap-6"
-				>
-					<DropzoneField files={files} setFiles={setFiles} />
-					<div className="flex items-center">
+				<div className="flex flex-col items-end gap-6">
+					<BlurFade
+						duration={0.8}
+						delay={0.6}
+						inView
+						className="h-full"
+					>
+						<DropzoneField files={files} setFiles={setFiles} />
+					</BlurFade>
+					<BlurFade duration={0.8} delay={0.7} inView>
 						<Button className="px-6 !py-5" variant={"default"}>
 							Enviar
 						</Button>
-					</div>
-				</BlurFade>
+					</BlurFade>
+				</div>
 				<BlurFade
 					className="flex flex-col"
-					duration={0.6}
+					duration={0.8}
 					delay={1}
 					inView
 				>
 					<Steps open={open} files={files} />
 				</BlurFade>
 			</div>
+			{/* TODO Dynamic filling in process*/}
 
 			<InfoDialog open={open} setOpen={setOpen} />
 		</main>

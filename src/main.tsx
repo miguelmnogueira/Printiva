@@ -18,6 +18,9 @@ ReactDOM.createRoot(root).render(
 				<Route path="" element={<Home />} />
 				<Route path="*" element={<NoRoutes />} />
 				<Route path="products/pets" element={<Paws />} />
+				{/* TODO page linha pet */}
+				{/* TODO page linha miniatura */}
+				{/* TODO page linha gamer */}
 			</Routes>
 		</ThemeProvider>
 	</BrowserRouter>
