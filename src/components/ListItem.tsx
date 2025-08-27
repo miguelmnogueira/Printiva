@@ -18,11 +18,11 @@ const ListItem = ({ title, href, children, icon }: ListItemProps) => {
 						"block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
 					}
 				>
-					<div className="!m-0 text-md font-medium leading-none flex gap-2  text-primary [&>svg]:!size-4.5 items-center">
+					<div className="!m-0 !text-base font-medium leading-none flex gap-2 text-primary [&>svg]:!size-4.8 items-center">
 						{icon}
 						<span>{title}</span>
 					</div>
-					<p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+					<p className="line-clamp-2 !text-sm leading-snug text-muted-foreground">
 						{children}
 					</p>
 				</a>

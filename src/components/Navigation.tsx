@@ -72,13 +72,13 @@ const Navigation = () => {
 					</NavigationMenuTrigger>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
-					<NavigationMenuLink href="/contact">
-						Contato
+					<NavigationMenuLink href="/aboutus">
+						Sobre Nós
 					</NavigationMenuLink>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
-					<NavigationMenuLink href="/aboutus">
-						Sobre Nós
+					<NavigationMenuLink href="/contact">
+						Contato
 					</NavigationMenuLink>
 				</NavigationMenuItem>
 			</NavigationMenuList>
