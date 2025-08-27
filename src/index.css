@@ -19,7 +19,7 @@
 		@apply border-border outline-ring/50;
 	}
 	body {
-		@apply bg-background text-foreground mt-20 font-inter overflow-x-hidden px-padding max-md:px-md-padding max-sm:px-md-padding;
+		@apply bg-background text-foreground !mt-20 font-inter overflow-x-hidden !px-padding max-md:px-md-padding max-sm:px-md-padding !pt-0;
 	}
 
 	body {

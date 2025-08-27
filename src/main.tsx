@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import "./index.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import NoRoutes from "./pages/NoRoutes";
-import Catalog from "./pages/Catalog";
+import Paws from "./pages/Products/Pets/Paws";
 
 const root = document.getElementById("root")!;
 
@@ -16,8 +16,8 @@ ReactDOM.createRoot(root).render(
 			<Routes>
 				<Route path="/home" element={<Home />} />
 				<Route path="" element={<Home />} />
-				<Route path="/catalog" element={<Catalog />} />
 				<Route path="*" element={<NoRoutes />} />
+				<Route path="/products/pets/paws" element={<Paws />} />
 			</Routes>
 		</ThemeProvider>
 	</BrowserRouter>
