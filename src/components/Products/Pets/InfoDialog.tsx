@@ -13,7 +13,7 @@ import { PhoneInput } from "@/components/ui/phone-input";
 import { useState } from "react";
 
 const InfoDialog = () => {
-	const [open, setOpen] = useState(true);
+	const [open, setOpen] = useState(false);
 
 	return (
 		<AlertDialog open={open} onOpenChange={setOpen}>
