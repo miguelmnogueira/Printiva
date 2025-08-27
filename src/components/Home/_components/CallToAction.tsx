@@ -26,7 +26,7 @@ const CallToAction = () => {
 				<div className="flex flex-col md:flex-row gap-2 md:gap-5 items-center mt-5 font-inter">
 					<Link
 						to={"/contact"}
-						className="flex items-center px-4 h-10 bg-foreground/90 rounded-lg text-primary-foreground font-semibold text-[15px] hover:bg-white transition-colors cursor-pointer"
+						className="flex items-center px-4 h-10 bg-foreground/90 rounded-lg text-primary-foreground font-semibold text-[15px] hover:bg-foreground hover:text-background transition-colors cursor-pointer"
 					>
 						Inicie seu projeto
 					</Link>
@@ -34,7 +34,7 @@ const CallToAction = () => {
 						to={"features"}
 						smooth={`500`}
 						offset={-130}
-						className="h-10 flex items-center text-primary/65 text-[16px]  gap-2 hover:ml-0.5 hover:gap-2.5 hover:text-primary/90 transition-all cursor-pointer"
+						className="h-10 flex items-center text-tertiary/70 text-[16px]  gap-2 hover:ml-0.5 hover:gap-2.5 hover:text-foreground/70 transition-all cursor-pointer"
 					>
 						Veja mais sobre nossos projetos
 						<FaAngleRight />

@@ -1,4 +1,3 @@
-import React from "react";
 import CallToAction from "./CallToAction";
 import InfiniteGrid from "./InfiniteGrid";
 

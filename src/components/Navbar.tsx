@@ -25,7 +25,7 @@ const Navbar = () => {
 					Printiva
 				</span>
 			</a>
-			<nav className="md:flex hidden justify-center items-center h-full gap-10 text-text-tertiary">
+			<nav className="md:flex hidden justify-center items-center h-full gap-10 text-tertiary">
 				{links.map((link) => (
 					<Link
 						key={link.href}

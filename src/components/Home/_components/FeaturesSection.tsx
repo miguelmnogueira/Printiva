@@ -6,7 +6,7 @@ import { BlurFade } from "@/components/ui/blur-fade";
 
 const FeaturesSection = () => {
 	return (
-		<section className="flex flex-col gap-20 max-sm:gap-5">
+		<section className="flex flex-col gap-20 max-sm:gap-5 ">
 			<BlurFade delay={0.15 * 2} duration={1} inView>
 				<div className="flex flex-col md:flex-row justify-between max-md:gap-3 md:w-[90%]">
 					<Element name="features">
