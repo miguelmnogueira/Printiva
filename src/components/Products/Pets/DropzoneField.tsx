@@ -34,12 +34,12 @@ const DropzoneField = ({
 			src={files}
 			maxSize={1024 * 1024 * 10}
 			minSize={1024}
-			className="w-112 h-[100%]"
+			className="w-full h-[100%]"
 		>
 			<DropzoneEmptyState />
 			<DropzoneContent>
 				{filePreview && (
-					<div className="h-[102px] w-full">
+					<div className="md:h-[102px] h-[150px] w-full">
 						<img
 							alt="Preview"
 							className="absolute top-0 left-0 h-full w-full object-cover"

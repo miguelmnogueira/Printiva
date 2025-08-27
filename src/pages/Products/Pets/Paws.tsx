@@ -13,13 +13,13 @@ const Paws = () => {
 	return (
 		<main className={`flex flex-col gap-12 ${open && "hidden"}`}>
 			<MainTitle />
-			<div className="flex gap-24 px-12">
-				<div className="flex flex-col items-end gap-6">
+			<div className="flex gap-24 md:px-12 md:flex-row flex-col">
+				<div className="flex items-end gap-6 flex-col md:flex-row">
 					<BlurFade
 						duration={0.8}
 						delay={0.6}
 						inView
-						className="h-full"
+						className="h-full w-full"
 					>
 						<DropzoneField files={files} setFiles={setFiles} />
 					</BlurFade>

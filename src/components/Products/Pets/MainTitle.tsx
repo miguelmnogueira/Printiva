@@ -9,10 +9,15 @@ const MainTitle = () => {
 				</h1>
 			</BlurFade>
 			<BlurFade duration={0.8} delay={0.3} inView>
-				<p className="max-w-2xl text-tertiary/80">
+				<p className="max-w-2xl text-tertiary/80 max-md:hidden">
 					Ao enviar a foto da pata de seu animal, entraremos em
 					contato pelo WhatsApp, envieremos o modelo para aprovação,
 					junto do valor total da sua encomenda.
+				</p>
+				<p className="max-w-2xl text-tertiary/80 md:hidden">
+					{/* versao resumida do texto */}
+					Ao enviar a foto da pata de seu animal, entraremos em
+					contato pelo WhatsApp.
 				</p>
 			</BlurFade>
 		</div>

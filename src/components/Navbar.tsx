@@ -2,6 +2,7 @@ import PrintivaLogo from "./PrintivaLogo";
 
 import Navigation from "./Navigation";
 import { Link } from "react-router";
+import HamburgerMenu from "./ui/hamburguer-menu";
 
 const Navbar = () => {
 	return (
@@ -13,6 +14,7 @@ const Navbar = () => {
 				</span>
 			</Link>
 			<Navigation />
+			<HamburgerMenu />
 		</header>
 	);
 };

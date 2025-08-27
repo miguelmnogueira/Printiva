@@ -37,5 +37,14 @@ export default function Steps({
 			status: "pending",
 		},
 	];
-	return <Timeline items={items} variant={"spacious"} />;
+	return (
+		<div>
+			<Timeline
+				items={items}
+				className="max-md:hidden"
+				variant={"spacious"}
+			/>
+			<Timeline items={items} className="md:hidden" variant={"compact"} />
+		</div>
+	);
 }
