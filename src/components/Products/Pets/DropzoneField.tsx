@@ -34,7 +34,7 @@ const DropzoneField = ({
 			src={files}
 			maxSize={1024 * 1024 * 10}
 			minSize={1024}
-			className="max-md:w-full w-lg h-[100%]"
+			className="max-md:w-full max-w-lg h-[100%]"
 		>
 			<DropzoneEmptyState />
 			<DropzoneContent>

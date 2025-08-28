@@ -14,9 +14,16 @@ import { PhoneInput } from "@/components/ui/phone-input";
 const InfoDialog = ({
 	open,
 	setOpen,
+	setUserInfo,
+	userInfo,
 }: {
 	open: boolean;
 	setOpen: (open: boolean) => void;
+	userInfo: {
+		name: string;
+		phone: number | undefined;
+	};
+	setUserInfo: (info: { name: string; phone: number | undefined }) => void;
 }) => {
 	return (
 		<AlertDialog open={open} onOpenChange={setOpen}>
@@ -49,6 +56,12 @@ const InfoDialog = ({
 								id="name-1"
 								name="name"
 								placeholder="Digite seu nome"
+								onChange={(e) => {
+									setUserInfo({
+										...userInfo,
+										name: e.target.value,
+									});
+								}}
 								required
 							/>
 						</div>
@@ -58,6 +71,14 @@ const InfoDialog = ({
 								defaultCountry="BR"
 								placeholder="Digite seu telefone"
 								required
+								onChange={(value) =>
+									setUserInfo({
+										...userInfo,
+										phone: value
+											? Number(value)
+											: undefined,
+									})
+								}
 							/>
 						</div>
 					</div>

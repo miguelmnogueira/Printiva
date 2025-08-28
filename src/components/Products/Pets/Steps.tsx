@@ -3,9 +3,13 @@ import { Timeline, type TimelineItem } from "@/components/timeline";
 export default function Steps({
 	open,
 	files,
+	steps,
+	measurements,
 }: {
 	open: boolean;
 	files: File[] | undefined;
+	steps: number;
+	measurements: number | undefined;
 }) {
 	const items: TimelineItem[] = [
 		{
@@ -27,14 +31,24 @@ export default function Steps({
 			title: "Selecionar o tamanho da impressão",
 			description: "Selecione o tamanho da impressão desejado",
 			timestamp: "Passo 3",
-			status: "pending",
+			status:
+				steps == 2 || steps == 3
+					? measurements == undefined
+						? "active"
+						: "completed"
+					: "pending",
 		},
 		{
 			id: "4",
 			title: "Enviar as informações",
 			description: "Pressione o botão para enviar as informações",
 			timestamp: "Passo 4",
-			status: "pending",
+			status:
+				measurements !== undefined
+					? steps == 3
+						? "completed"
+						: "active"
+					: "pending",
 		},
 	];
 	return (
