@@ -29,18 +29,13 @@ const Paws = () => {
 	});
 
 	const handleDisable = () => {
-		if (steps === 1) {
-			if (files && files.length > 0) {
-				return false;
-			}
+		if (steps === 1 && files?.length !== undefined) {
+			return false;
 		}
 
-		if (steps === 2) {
-			if (measurement !== undefined && terms) {
-				return false;
-			}
+		if (steps === 2 && measurement !== undefined && terms) {
+			return false;
 		}
-
 		return true;
 	};
 
@@ -57,11 +52,7 @@ const Paws = () => {
 
 	const sendToDiscord = async (file: File) => {
 		const formData = new FormData();
-
-
 		formData.append("file", file, file.name);
-
-
 		formData.append(
 			"payload_json",
 			JSON.stringify({
@@ -76,7 +67,7 @@ const Paws = () => {
 				embeds: [
 					{
 						image: {
-							url: `attachment://${file.name}`, 
+							url: `attachment://${file.name}`,
 						},
 					},
 				],
