@@ -32,7 +32,7 @@ const StepInput = ({
 				<BlurFade
 					duration={0.8}
 					delay={0.7}
-					className="h-full w-112"
+					className="h-full w-full md:w-112"
 					inView
 				>
 					<DropzoneField files={files} setFiles={setFiles} />
@@ -42,7 +42,7 @@ const StepInput = ({
 			return (
 				<BlurFade
 					duration={0.8}
-					className="h-full flex flex-col gap-10 w-112"
+					className="h-full flex flex-col gap-10 w-full md:w-112"
 				>
 					<MeasureField
 						measurement={measurement}
@@ -72,7 +72,7 @@ const StepInput = ({
 			return (
 				<BlurFade
 					duration={0.8}
-					className="h-full w-138 flex flex-col gap-4 "
+					className="h-full w-full md:w-138 flex flex-col gap-4 "
 				>
 					<div className="flex flex-col border py-8 px-8 rounded-lg gap-2">
 						<div className="flex items-center gap-3">

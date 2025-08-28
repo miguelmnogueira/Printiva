@@ -56,19 +56,45 @@ const Paws = () => {
 		formData.append(
 			"payload_json",
 			JSON.stringify({
-				content: `
-📦 **Novo pedido feito!**
-
-🙍 Nome: **${userInfo.name}**
-📱 Telefone: **${userInfo.phone}**
-
-📏 Medida: **${measurement}cm**
-💰 Preço estimado: **R$${estimatedPrice}**`,
 				embeds: [
 					{
-						image: {
-							url: `attachment://${file.name}`,
+						title: "📦 • Novo Pedido",
+						description: "### Informações do Pedido:",
+						color: 0,
+						footer: {
+							text: "Printiva | Linha Pets/Paws",
 						},
+						fields: [
+							{
+								name: "🙍 |  **Nome**",
+								value: `${userInfo.name}`,
+								inline: true,
+							},
+							{
+								name: "📱 | **Telefone**",
+								value: `${userInfo.phone}`,
+								inline: true,
+							},
+							{
+								name: "📏 | **Medida**",
+								value: `${measurement}x${measurement}cm`,
+								inline: false,
+							},
+							{
+								name: "💰 | **Preço Estimado**",
+								value: `R$${estimatedPrice},00`,
+								inline: false,
+							},
+						],
+						image: {
+							url: `attachment://pedido.png`,
+						},
+					},
+				],
+				files: [
+					{
+						attachment: files ? files[0] : "",
+						name: `pedido.png`,
 					},
 				],
 			})
