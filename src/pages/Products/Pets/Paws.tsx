@@ -1,3 +1,4 @@
+import { sendOrder } from "@/api/sendOrder";
 import InfoDialog from "@/components/Products/Pets/InfoDialog";
 import StepInput from "@/components/Products/Pets/Inputs";
 import MainTitle from "@/components/Products/Pets/MainTitle";
@@ -17,8 +18,6 @@ const Paws = () => {
 	);
 	const [terms, setTerms] = useState<boolean>(false);
 	const [steps, setSteps] = useState<number>(1);
-
-	const webhookUrl = import.meta.env.VITE_DISCORD_WEBHOOK_URL;
 
 	const [userInfo, setUserInfo] = useState<{
 		name: string;
@@ -44,68 +43,16 @@ const Paws = () => {
 			setSteps(steps + 1);
 		} else {
 			if (files && files.length > 0) {
-				sendToDiscord(files[0]);
+				sendOrder({
+					name: userInfo.name,
+					phone: userInfo.phone ? userInfo.phone : 0,
+					measurement: measurement ? measurement : 0,
+					estimatedPrice: estimatedPrice ? estimatedPrice : 0,
+					file: files[0],
+				});
 				setSteps(steps + 1);
 			}
 		}
-	};
-
-	const sendToDiscord = async (file: File) => {
-		const formData = new FormData();
-		formData.append("file", file, file.name);
-		formData.append(
-			"payload_json",
-			JSON.stringify({
-				embeds: [
-					{
-						title: "📦 • Novo Pedido",
-						description: "### Informações do Pedido:",
-						color: 0,
-						footer: {
-							text: "Printiva | Linha Pets/Paws",
-						},
-						fields: [
-							{
-								name: "🙍 |  **Nome**",
-								value: `${userInfo.name}`,
-								inline: true,
-							},
-							{
-								name: "📱 | **Telefone**",
-								value: `${userInfo.phone}`,
-								inline: true,
-							},
-							{
-								name: "📏 | **Medida**",
-								value: `${measurement}x${measurement}cm`,
-								inline: false,
-							},
-							{
-								name: "💰 | **Preço Estimado**",
-								value: `R$${estimatedPrice},00`,
-								inline: false,
-							},
-						],
-						image: {
-							url: `attachment://pedido.png`,
-						},
-					},
-				],
-				files: [
-					{
-						attachment: files ? files[0] : "",
-						name: `pedido.png`,
-					},
-				],
-			})
-		);
-
-		const res = await fetch(webhookUrl, {
-			method: "POST",
-			body: formData,
-		});
-
-		console.error("Failed:", await res.text());
 	};
 
 	return (
