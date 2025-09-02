@@ -47,7 +47,6 @@ const Paws = () => {
 					name: userInfo.name,
 					phone: userInfo.phone ? userInfo.phone : 0,
 					measurement: measurement ? measurement : 0,
-					estimatedPrice: estimatedPrice ? estimatedPrice : 0,
 					file: files[0],
 				});
 				setSteps(steps + 1);
