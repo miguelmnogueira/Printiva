@@ -66,7 +66,7 @@ export const Dropzone = ({
     disabled,
     onDrop: (acceptedFiles, fileRejections, event) => {
       if (fileRejections.length > 0) {
-        const message = fileRejections.at(0)?.errors.at(0)?.message;
+        const message = fileRejections[0]?.errors[0]?.message;
         onError?.(new Error(message));
         return;
       }
@@ -137,10 +137,11 @@ export const DropzoneContent = ({
       </div>
       <p className="my-2 w-full truncate font-medium text-sm">
         {src.length > maxLabelItems
-          ? `${new Intl.ListFormat('en').format(
-              src.slice(0, maxLabelItems).map((file) => file.name)
-            )} and ${src.length - maxLabelItems} more`
-          : new Intl.ListFormat('en').format(src.map((file) => file.name))}
+          ? `${src
+              .slice(0, maxLabelItems)
+              .map((file) => file.name)
+              .join(', ')} and ${src.length - maxLabelItems} more`
+          : src.map((file) => file.name).join(', ')}
       </p>
       <p className="w-full text-wrap text-muted-foreground text-xs">
         Drag and drop or click to replace
@@ -172,7 +173,7 @@ export const DropzoneEmptyState = ({
 
   if (accept) {
     caption += 'Accepts ';
-    caption += new Intl.ListFormat('en').format(Object.keys(accept));
+    caption += Object.keys(accept).join(', ');
   }
 
   if (minSize && maxSize) {
