@@ -43,7 +43,6 @@ This site is built using:
 - **Vite** for bundling
 - **TailwindCSS** for styling
 - **Framer Motion** for animations
-- **Cloudinary** (or similar) for media hosting
 
 ---
 
